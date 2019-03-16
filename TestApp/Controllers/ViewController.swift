@@ -27,21 +27,6 @@ class ViewController: UIViewController {
         Utils.setViewCornerRadius(view: userImageView)
     }
     
-    func addImageHistory(nameObj: UserName, pictureObj: Picture) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
-        entity.fullName = nameObj.getFullName()
-        entity.largeImage = pictureObj.large
-        entity.thumbImage = pictureObj.thumbnail
-        do {
-            try context.save()
-        } catch {
-            print("couldn't save")
-        }
-       
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getRandomImage()
@@ -62,7 +47,8 @@ class ViewController: UIViewController {
                             if let pictureDict = firstItem["picture"] as? [String: AnyObject] {
                                 let pictureObj = Picture(json: pictureDict)
                                 self.userImageView?.sd_setImage(with: URL(string: pictureObj.large ?? ""), placeholderImage: nil)
-                                self.addImageHistory(nameObj: nameObj, pictureObj: pictureObj)
+                                DBManager.sharedInstance.addImageHistory(nameObj: nameObj, pictureObj: pictureObj)
+                               // self.addImageHistory(nameObj: nameObj, pictureObj: pictureObj)
                             }
                             
                         }

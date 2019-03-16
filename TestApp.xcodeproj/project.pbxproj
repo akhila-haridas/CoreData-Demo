@@ -22,6 +22,7 @@
 		1525A2BE22293BEE00864222 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525A2BD22293BEE00864222 /* HistoryViewController.swift */; };
 		1525A2C0222BD85500864222 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525A2BF222BD85500864222 /* HistoryTableViewCell.swift */; };
 		1525A2C8222D4B0B00864222 /* TestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1525A2C6222D4B0A00864222 /* TestApp.xcdatamodeld */; };
+		156C91AA223D6123004ED508 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C91A9223D6123004ED508 /* DBManager.swift */; };
 		15A1E0DF222E6200000A778E /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1E0DD222E6200000A778E /* User+CoreDataClass.swift */; };
 		15A1E0E0222E6200000A778E /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1E0DE222E6200000A778E /* User+CoreDataProperties.swift */; };
 		33DACB353BDD81124B39E007 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6B5543F36381C3FE3139D5 /* Pods_TestApp.framework */; };
@@ -68,6 +69,7 @@
 		1525A2BD22293BEE00864222 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		1525A2BF222BD85500864222 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		1525A2C7222D4B0A00864222 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		156C91A9223D6123004ED508 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		15A1E0DD222E6200000A778E /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Models/User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		15A1E0DE222E6200000A778E /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Models/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		41F376BBEC13B9D8AE801ECD /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				1525A2B8222114EE00864222 /* Utilities.swift */,
+				156C91A9223D6123004ED508 /* DBManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				1525A2B2222108F600864222 /* Constants.swift in Sources */,
 				1525A2B422210CCC00864222 /* Username.swift in Sources */,
 				15A1E0E0222E6200000A778E /* User+CoreDataProperties.swift in Sources */,
+				156C91AA223D6123004ED508 /* DBManager.swift in Sources */,
 				15155B44221EF77E00DA1D9C /* ViewController.swift in Sources */,
 				1525A2B62221103200864222 /* Picture.swift in Sources */,
 				1525A2C0222BD85500864222 /* HistoryTableViewCell.swift in Sources */,

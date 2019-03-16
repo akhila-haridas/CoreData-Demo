@@ -46,14 +46,8 @@ class HistoryViewController: UIViewController {
     }
     
     @IBAction func didTapClear(_ sender: UIBarButtonItem) {
-        let context = appDelegate.persistentContainer.viewContext
-        let request = User.fetchRequest()
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
-        do {
-            try appDelegate.persistentContainer.persistentStoreCoordinator.execute(deleteRequest, with: context)
+        if DBManager.sharedInstance.clearHistory() {
             userArray?.removeAll()
-        } catch {
-            print(error.localizedDescription)
         }
     }
 
